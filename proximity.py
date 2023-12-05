@@ -22,7 +22,11 @@ import localization
 
 # =============================================================================
 def calculate_closest_distance(net,A,B):
-    
+
+    # net = genes relations
+    # A = genes de la maladie
+    # B = genes targets du médicament
+
     values_outer = []
     
     for node_from in A:
@@ -50,7 +54,11 @@ def calculate_closest_distance(net,A,B):
     return d
     
 # =============================================================================
-def get_proximity(G, genes, targets, sims):    
+
+def get_proximity(G, genes, targets, sims):
+    # G = genes relations
+    # genes = genes de la maladie
+    # targets = genes targets du médicament
 
     # getting all genes in the network  
     all_genes = sorted(G.nodes())
